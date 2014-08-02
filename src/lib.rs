@@ -18,7 +18,7 @@ use std::str;
 
 pub use Curl = self::easy::Curl;
 
-#[link(name = "curl")]
+#[link(name = "curl", kind = "static")]
 extern {
     fn curl_version() -> *const c_char;
     fn curl_global_init(flags: c_long) -> c_int;
