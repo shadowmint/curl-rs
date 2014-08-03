@@ -7,4 +7,3 @@ build = "make"
 [[lib]]
 name = "curl"
 path = "src/lib.rs"
-crate-type = ["staticlib"]
