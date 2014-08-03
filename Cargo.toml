@@ -1,9 +1,10 @@
 [package]
 name = "curl"
-version = "0.0.1"
+version = "0.1.0"
 authors = ["andelf@gmail.com", "valerii.hiora@gmail.com"]
+build = "make"
 
 [[lib]]
 name = "curl"
-crate_type = ["rlib"]
 path = "src/lib.rs"
+crate-type = ["staticlib"]
