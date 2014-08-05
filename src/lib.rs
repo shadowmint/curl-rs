@@ -4,7 +4,6 @@
 #![desc = "A rust package for libcurl."]
 #![license = "MIT"]
 #![feature(phase)]
-#![feature(link_args)]
 
 extern crate libc;
 extern crate regex;
@@ -19,8 +18,7 @@ use std::str;
 
 pub use Curl = self::easy::Curl;
 
-#[link(name = "curl", kind = "static")]
-#[link_args = "-Ldeps/curl/lib/.libs"]
+#[link(name = "curl")]
 extern {
     fn curl_version() -> *const c_char;
     fn curl_global_init(flags: c_long) -> c_int;

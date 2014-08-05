@@ -6,7 +6,7 @@ use opt;
 
 #[allow(dead_code)]
 #[allow(unused_variable)]
-#[link(name = "curl", kind = "static")]
+#[link(name = "curl")]
 extern {
     fn curl_easy_escape(h: uintptr_t, url: *const c_char, length: c_int) -> *const c_char;
     fn curl_easy_init() -> uintptr_t;
